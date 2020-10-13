@@ -1,0 +1,13 @@
+We are building an app that generates a recipe from the users input of ingredients.
+We ask for input from our users and then using a library we generate a recipe for the user based on
+ingredients provided.
+
+Play Gordon Ramsay sound when a recipe is given, MP3 from Youtube.
+
+1. We need to create a recipe .txt - max 10 recipes
+2. We need to create a scanner for user input, this reads protein and gives a recipe (file reader)
+3. Somewhere a sound will play of Gordon Ramsay (play audio)
+4. List/sort
+5. File Reader/File write
+6. Javadoc
+7. Print recipe + URL
