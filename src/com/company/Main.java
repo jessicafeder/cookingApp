@@ -36,8 +36,6 @@ public class Main {
                 String input = myRecipe.nextLine();
                 if (input.contains(protein.toLowerCase()) && input.contains(carb.toLowerCase())) {
                     System.out.println(input);
-                } else {
-                    System.err.println("No recipe found with those ingredients."); //This repeats 5x??
                 }
 
             }
