@@ -9,5 +9,5 @@ Play Gordon Ramsay sound when a recipe is given, MP3 from Youtube.
 3. Somewhere a sound will play of Gordon Ramsay (play audio)
 4. List/sort
 5. File Reader/File write
-6. Javadoc
+6. Javadoc (i.e ReadFile)
 7. Print recipe + URL
