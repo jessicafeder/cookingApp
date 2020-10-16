@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.sound.sampled.*;
+import javax.swing.*;
 import java.io.*;
 import java.net.*;
 import java.sql.SQLOutput;
@@ -9,6 +11,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        File ramsay = new File("sounds/ramsaysoundwav.wav");
         Scanner sc = new Scanner(System.in);
         System.out.println("Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
         String protein = sc.nextLine();  // Read user input
@@ -18,6 +21,7 @@ public class Main {
         System.out.println("Your chosen carb is: " + carb + "\n");
 
         readFile(protein, carb);
+        playSound(ramsay);
 
     }
 
@@ -47,4 +51,19 @@ public class Main {
         }
     }
 
+    public static void playSound(File sound) {
+        try {
+            Clip clip = AudioSystem.getClip();
+            clip.open(AudioSystem.getAudioInputStream(sound));
+            clip.start();
+
+            Thread.sleep(clip.getMicrosecondLength()/1000);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
 }
