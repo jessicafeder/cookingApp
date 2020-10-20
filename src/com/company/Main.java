@@ -26,9 +26,13 @@ public class Main {
         }
         String protein = sc.nextLine();
         System.out.println("Your chosen protein is: " + protein + "\n");
+
+        System.out.println("Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
+        String protein = sc.nextLine();  // Read user input
+
         System.out.println("Name one of the following carbs: Rice, Pasta, Potato ");
         String carb = sc.nextLine();
-        System.out.println("Your chosen carb is: " + carb + "\n");
+        System.out.println("Your chosen ingredients are: " + protein + " and " + carb +   "\n");
 
         readFile(protein, carb);
         playSound(ramsay);
