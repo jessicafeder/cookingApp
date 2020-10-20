@@ -20,7 +20,8 @@ public class Main {
         System.out.println("For a list of recipes press 1, to choose your own ingredients press 2: ");
         String inputChoice = sc.nextLine();
         if(inputChoice.equals("1")){
-            System.out.println("Great! Here is a list of recipes for you to choose from: ");
+            System.out.println("Great! Here is a list of recipes for you to choose from: \n" + listFile());
+
 
         } else if(inputChoice.equals("2")){
             System.out.println("Fun! Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
@@ -57,6 +58,9 @@ public class Main {
      * @param protein keyword needed for recipe generator
      * @param carb    keyword needed for recipe generator
      */
+
+
+
     public static void readFile(String protein, String carb) {
         try {
             File recipe = new File("src/Files/Recipe.txt");
@@ -64,7 +68,7 @@ public class Main {
             while (myRecipe.hasNextLine()) {
                 String input = myRecipe.nextLine();
                 if (input.contains(protein.toLowerCase()) && input.contains(carb.toLowerCase())) {
-                    System.out.println(input);
+                    System.out.println();
                 }
 
             }
@@ -74,6 +78,24 @@ public class Main {
             System.out.println("Not found");
             e.printStackTrace();
         }
+    }
+    public static String listFile(){
+        String result = "";
+        try {
+            File recipe = new File("src/Files/Recipe.txt");
+            Scanner myRecipe = new Scanner(recipe);
+            while (myRecipe.hasNextLine()) {
+                //System.out.println(myRecipe.nextLine());
+                result += myRecipe.nextLine() + "\n";
+            }
+            myRecipe.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Not found");
+            e.printStackTrace();
+        }
+        return result;
+
     }
 
     public static void playSound() {
