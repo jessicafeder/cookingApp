@@ -67,7 +67,7 @@ public class Main {
             Scanner myRecipe = new Scanner(recipe);
             while (myRecipe.hasNextLine()) {
                 String input = myRecipe.nextLine();
-                if (input.contains(protein.toLowerCase()) && input.contains(carb.toLowerCase())) {
+                if (input.contains(protein.toUpperCase()) && input.contains(carb.toUpperCase())) {
                     System.out.println(input);
                 }
 
@@ -93,8 +93,10 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.out.println("Not found");
             e.printStackTrace();
+
         }
-        return result;
+
+        return result + "\nGood luck and have fun!";
 
     }
 
