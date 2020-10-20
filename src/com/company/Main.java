@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        File ramsay = new File("sounds/ramsaysoundwav.wav");
+
         Scanner sc = new Scanner(System.in);
         // Input, output
         System.out.println("Hello, welcome to the Cooking App!\n");
@@ -21,6 +21,7 @@ public class Main {
         String inputChoice = sc.nextLine();
         if(inputChoice.equals("1")){
             System.out.println("Great! Here is a list of recipes for you to choose from: ");
+
         } else if(inputChoice.equals("2")){
             System.out.println("Fun! Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
         }
@@ -32,7 +33,7 @@ public class Main {
         System.out.println("Your chosen ingredients are: " + protein + " and " + carb +   "\n");
 
         readFile(protein, carb);
-        playSound(ramsay);
+        playSound();
 
     }
 
@@ -75,10 +76,11 @@ public class Main {
         }
     }
 
-    public static void playSound(File sound) {
+    public static void playSound() {
+        File ramsay = new File("sounds/ramsaysoundwav.wav");
         try {
             Clip clip = AudioSystem.getClip();
-            clip.open(AudioSystem.getAudioInputStream(sound));
+            clip.open(AudioSystem.getAudioInputStream(ramsay));
             clip.start();
 
             Thread.sleep(clip.getMicrosecondLength()/1000);
