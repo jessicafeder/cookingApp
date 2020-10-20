@@ -4,10 +4,14 @@ ingredients provided.
 
 Play Gordon Ramsay sound when a recipe is given, MP3 from Youtube.
 
-1. We need to create a recipe .txt - max 10 recipes
-2. We need to create a scanner for user input, this reads protein and gives a recipe (file reader)
-3. Somewhere a sound will play of Gordon Ramsay (play audio)
-4. List/sort
-5. File Reader/File write
-6. Javadoc (i.e ReadFile)
-7. Print recipe + URL
+Done:
+We need to create a scanner for user input, this reads protein and gives a recipe (file reader)
+File Reader
+Javadoc (i.e ReadFile) - Jessica
+Print recipe + URL
+Somewhere a sound will play of Gordon Ramsay (play audio) - Andreas
+
+To do:
+File Write - Anders
+We need to create a recipe .txt - max 10 recipes
+List/sort

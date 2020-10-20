@@ -11,11 +11,21 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         File ramsay = new File("sounds/ramsaysoundwav.wav");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
-        String protein = sc.nextLine();  // Read user input
-        System.out.println("Your chosen protein is: " + protein + "\n");  // Output user input
+        // Input, output
+        System.out.println("Hello, welcome to the Cooking App!\n");
+
+        System.out.println("For a list of recipes press 1, to choose your own ingredients press 2: ");
+        String inputChoice = sc.nextLine();
+        if(inputChoice.equals("1")){
+            System.out.println("Great! Here is a list of recipes for you to choose from: ");
+        } else if(inputChoice.equals("2")){
+            System.out.println("Fun! Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
+        }
+        String protein = sc.nextLine();
+        System.out.println("Your chosen protein is: " + protein + "\n");
         System.out.println("Name one of the following carbs: Rice, Pasta, Potato ");
         String carb = sc.nextLine();
         System.out.println("Your chosen carb is: " + carb + "\n");
@@ -24,6 +34,19 @@ public class Main {
         playSound(ramsay);
 
     }
+
+    /*public boolean readChoices(){
+        Scanner sc = new Scanner(System.in);
+
+        if(sc.equals(1)){
+            System.out.println("Great! Here is a list of recipes for you to choose from: ");
+        } else if(sc.equals(2)){
+
+        }
+
+        return false;
+    }*/
+
 
 
     /**
