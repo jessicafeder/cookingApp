@@ -1,27 +1,22 @@
 package com.company;
 
 import javax.sound.sampled.*;
-import javax.swing.*;
 import java.io.*;
-import java.net.*;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
 public class Main {
 
     public static void main(String[] args) {
-
-
+        //FileToArray.fileToArray();
         Scanner sc = new Scanner(System.in);
-        // Input, output
         System.out.println("Hello, welcome to the Cooking App!\n");
 
         System.out.println("For a list of recipes press 1, to choose your own ingredients press 2: ");
         String inputChoice = sc.nextLine();
         if(inputChoice.equals("1")){
             System.out.println("Great! Here is a list of recipes for you to choose from: \n" + listFile());
-
+            return;
 
         } else if(inputChoice.equals("2")){
             System.out.println("Fun! Name one of the following proteins: Chicken, Salmon, Beef or Pork ");
@@ -38,18 +33,6 @@ public class Main {
 
     }
 
-    /*public boolean readChoices(){
-        Scanner sc = new Scanner(System.in);
-
-        if(sc.equals(1)){
-            System.out.println("Great! Here is a list of recipes for you to choose from: ");
-        } else if(sc.equals(2)){
-
-        }
-
-        return false;
-    }*/
-
 
 
     /**
@@ -58,8 +41,6 @@ public class Main {
      * @param protein keyword needed for recipe generator
      * @param carb    keyword needed for recipe generator
      */
-
-
 
     public static void readFile(String protein, String carb) {
         try {
@@ -79,13 +60,14 @@ public class Main {
             e.printStackTrace();
         }
     }
+
     public static String listFile(){
         String result = "";
         try {
             File recipe = new File("src/Files/Recipe.txt");
             Scanner myRecipe = new Scanner(recipe);
+
             while (myRecipe.hasNextLine()) {
-                //System.out.println(myRecipe.nextLine());
                 result += myRecipe.nextLine() + "\n";
             }
             myRecipe.close();
@@ -99,6 +81,7 @@ public class Main {
         return result + "\nGood luck and have fun!";
 
     }
+
 
     public static void playSound() {
         File ramsay = new File("sounds/ramsaysoundwav.wav");
