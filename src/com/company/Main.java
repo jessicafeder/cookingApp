@@ -68,7 +68,7 @@ public class Main {
             while (myRecipe.hasNextLine()) {
                 String input = myRecipe.nextLine();
                 if (input.contains(protein.toLowerCase()) && input.contains(carb.toLowerCase())) {
-                    System.out.println();
+                    System.out.println(input);
                 }
 
             }
