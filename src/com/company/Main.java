@@ -8,14 +8,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //FileToArray.fileToArray();
+        ListRecipe myRecipeList = new ListRecipe();
         Scanner sc = new Scanner(System.in);
         System.out.println("Hello, welcome to the Cooking App!\n");
 
         System.out.println("For a list of recipes press 1, to choose your own ingredients press 2: ");
         String inputChoice = sc.nextLine();
         if(inputChoice.equals("1")){
-            System.out.println("Great! Here is a list of recipes for you to choose from: \n" + listFile());
+            System.out.println("Great! Here is a list of recipes for you to choose from: \n \n" + myRecipeList.listFile());
             return;
 
         } else if(inputChoice.equals("2")){
@@ -60,27 +60,7 @@ public class Main {
             e.printStackTrace();
         }
     }
-
-    public static String listFile(){
-        String result = "";
-        try {
-            File recipe = new File("src/Files/Recipe.txt");
-            Scanner myRecipe = new Scanner(recipe);
-
-            while (myRecipe.hasNextLine()) {
-                result += myRecipe.nextLine() + "\n";
-            }
-            myRecipe.close();
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Not found");
-            e.printStackTrace();
-
-        }
-
-        return result + "\nGood luck and have fun!";
-
-    }
+    
 
 
     public static void playSound() {
