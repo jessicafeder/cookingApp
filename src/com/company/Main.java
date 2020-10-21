@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         ListRecipe myRecipeList = new ListRecipe();
+        PlaySound mySound = new PlaySound();
         Scanner sc = new Scanner(System.in);
         System.out.println("Hello, welcome to the Cooking App!\n");
 
@@ -29,7 +30,7 @@ public class Main {
         System.out.println("Your chosen ingredients are: " + protein + " and " + carb +   "\n");
 
         readFile(protein, carb);
-        playSound();
+        mySound.playSound();
 
     }
 
@@ -60,10 +61,10 @@ public class Main {
             e.printStackTrace();
         }
     }
-    
 
 
-    public static void playSound() {
+
+    /*public static void playSound() {
         File ramsay = new File("sounds/ramsaysoundwav.wav");
         try {
             Clip clip = AudioSystem.getClip();
@@ -78,5 +79,5 @@ public class Main {
         }
 
 
-    }
+    }*/
 }
