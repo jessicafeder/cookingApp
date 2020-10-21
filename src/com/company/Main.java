@@ -7,16 +7,19 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        ListRecipe myRecipeList = new ListRecipe();
+    public static void main(String[] args) throws IOException {
+        //ListRecipe myRecipeList = new ListRecipe();
         PlaySound mySound = new PlaySound();
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("Hello, welcome to the Cooking App!\n");
 
         System.out.println("For a list of recipes press 1, to choose your own ingredients press 2: ");
         String inputChoice = sc.nextLine();
         if(inputChoice.equals("1")){
-            System.out.println("Great! Here is a list of recipes for you to choose from: \n \n" + myRecipeList.listFile());
+            System.out.println("Great! Here is a list of recipes for you to choose from: \n \n"); //+ myRecipeList.listFile());
+            FileToArray.fileToArray();
+            System.out.println("\nGood luck and have fun!");
             return;
 
         } else if(inputChoice.equals("2")){
@@ -34,14 +37,6 @@ public class Main {
 
     }
 
-
-
-    /**
-     * This method helps us read file from Recipe.txt
-     *
-     * @param protein keyword needed for recipe generator
-     * @param carb    keyword needed for recipe generator
-     */
 
     public static void readFile(String protein, String carb) {
         try {

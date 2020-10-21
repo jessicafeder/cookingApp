@@ -5,7 +5,7 @@ import javax.sound.sampled.Clip;
 import java.io.File;
 
 public class PlaySound {
-    public void playSound() {
+    protected void playSound() {
         File ramsay = new File("sounds/ramsaysoundwav.wav");
         try {
             Clip clip = AudioSystem.getClip();
