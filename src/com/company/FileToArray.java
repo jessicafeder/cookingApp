@@ -9,12 +9,9 @@ public class FileToArray {
 
     public static void fileToArray() throws IOException {
         List<String> recipesList = Files.readAllLines(Paths.get("src/Files/Recipe.txt"));
-
-
         recipesList
                 .stream()
                 .sorted()
                 .forEach(System.out::println);
-
     }
 }

@@ -10,14 +10,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //ListRecipe myRecipeList = new ListRecipe();
         PlaySound mySound = new PlaySound();
-        
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Hello, welcome to the Cooking App!\n");
 
         System.out.println("For a list of recipes press 1, to choose your own ingredients press 2: ");
         String inputChoice = sc.nextLine();
         if(inputChoice.equals("1")){
-            System.out.println("Great! Here is a list of recipes for you to choose from: \n \n"); //+ myRecipeList.listFile());
+            System.out.println("Great! Here is a list of recipes for you to choose from: \n "); //+ myRecipeList.listFile());
             FileToArray.fileToArray();
             System.out.println("\nGood luck and have fun!");
             return;
