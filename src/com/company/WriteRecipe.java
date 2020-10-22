@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class WriteRecipe {
     public static void writeRecipe() throws IOException {
-        FileWriter fw = null;
+        FileWriter fw;
         fw = new FileWriter("src/Files/Recipe.txt", true);
         Scanner writeRecipe = new Scanner(System.in);
 
