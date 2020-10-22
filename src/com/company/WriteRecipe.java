@@ -14,10 +14,6 @@ public class WriteRecipe {
             String input = writeRecipe.nextLine();
             fw.write("\n" + input);
             break;
-            /*if("".equalsIgnoreCase(input.trim())){
-                break;
-            }*/
-            //fw.write("\n" + input);
         }
         writeRecipe.close();
         fw.close();

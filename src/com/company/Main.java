@@ -26,8 +26,9 @@ public class Main {
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
             }
             else if(inputChoice1.equals("N")){
-                System.out.println("Write your recipe as follows: PROTEIN WITH CARB: URL, finish by pressing enter two times");
+                System.out.println("Write your recipe in the following order -> PROTEIN WITH CARB: URL ");
                 WriteRecipe.writeRecipe();
+                System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
             }
             return;
 
