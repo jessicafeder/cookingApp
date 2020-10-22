@@ -28,9 +28,7 @@ public class Main {
             else if(inputChoice1.equals("N")){
                 System.out.println("Write your recipe as follows: PROTEIN WITH CARB: URL, finish by pressing enter two times");
                 WriteRecipe.writeRecipe();
-
             }
-
             return;
 
         } else if(inputChoice.equals("2")){
@@ -48,7 +46,4 @@ public class Main {
         mySound.playSound();
 
     }
-
-
-
 }
