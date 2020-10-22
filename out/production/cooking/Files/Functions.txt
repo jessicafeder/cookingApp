@@ -10,8 +10,9 @@ File Reader
 Javadoc (i.e ReadFile) - Jessica
 Print recipe + URL
 Somewhere a sound will play of Gordon Ramsay (play audio) - Andreas
+List/sort
 
 To do:
 File Write - Anders
-We need to create a recipe .txt - max 10 recipes
-List/sort
+We need to create a recipe .txt - max 12 recipes
+
