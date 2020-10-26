@@ -12,7 +12,7 @@ public class PlaySound {
             clip.open(AudioSystem.getAudioInputStream(ramsay));
             clip.start();
 
-            Thread.sleep(clip.getMicrosecondLength()/1000);
+            Thread.sleep(clip.getMicrosecondLength() /1000);
 
 
         } catch (Exception e) {

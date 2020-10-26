@@ -9,12 +9,8 @@ public class WriteRecipe {
         FileWriter fw;
         fw = new FileWriter("src/Files/Recipe.txt", true);
         Scanner writeRecipe = new Scanner(System.in);
-
-        while(true){
-            String input = writeRecipe.nextLine();
-            fw.write("\n" + input);
-            break;
-        }
+        String input = writeRecipe.nextLine();
+        fw.write("\n" + input);
         writeRecipe.close();
         fw.close();
     }
