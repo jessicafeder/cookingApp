@@ -2,12 +2,11 @@ package com.company;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.io.*;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
+
     @Test
     @DisplayName("Check if two inputs equals a string in a file")
     void readFileTest() {
@@ -35,8 +34,6 @@ public class MainTest {
         });
     }
 
-    @Test
-    @DisplayName("Testing that it finds")
 
 
 }

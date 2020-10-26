@@ -33,5 +33,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/commons-io-2.8.0-src.zip!/commons-io-2.8.0-src/src/main/java" />
+          <root url="jar://$USER_HOME$/Downloads/commons-io-2.8.0-src.zip!/commons-io-2.8.0-src/src/test/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
