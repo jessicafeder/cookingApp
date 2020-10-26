@@ -19,7 +19,7 @@ public class Main {
         String inputChoice = sc.nextLine();
         if (inputChoice.equals("1")) {
             System.out.println("Great! Here is a list of recipes for you to choose from: \n ");
-            FileToArray.fileToArray();
+            FileToArray.fileToArray("src/Files/Recipe.txt");
             System.out.println("\nDid you fancy any of the recipes? If yes type Y, if not write your own by typing N: ");
             String inputChoice1 = sc.nextLine();
             if (inputChoice1.equals("Y")) {

@@ -7,11 +7,14 @@ import java.util.List;
 
 public class FileToArray {
 
-    public static void fileToArray() throws IOException {
-        List<String> recipesList = Files.readAllLines(Paths.get("src/Files/Recipe.txt"));
+    public static void fileToArray(String path) throws IOException {
+
+        List<String> recipesList = Files.readAllLines(Paths.get(path));
         recipesList
                 .stream()
                 .sorted()
                 .forEach(System.out::println);
+
     }
+
 }
