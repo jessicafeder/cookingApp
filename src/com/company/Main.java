@@ -26,7 +26,7 @@ public class Main {
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
                 mySound.playSound();
             } else if (inputChoice1.equals("2")) {
-                System.out.println("Write your recipe in the following order -> PROTEIN WITH CARB: URL ");
+                System.out.println("Write your recipe in the following order -> PROTEIN WITH CARB: URL (Link from website) ");
                 WriteRecipe.writeRecipe();
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
                 mySound.playSound();
