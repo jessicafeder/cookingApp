@@ -24,10 +24,12 @@ public class Main {
             String inputChoice1 = sc.nextLine();
             if (inputChoice1.equals("Y")) {
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
+                mySound.playSound();
             } else if (inputChoice1.equals("N")) {
                 System.out.println("Write your recipe in the following order -> PROTEIN WITH CARB: URL ");
                 WriteRecipe.writeRecipe();
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
+                mySound.playSound();
             }
             return;
 
