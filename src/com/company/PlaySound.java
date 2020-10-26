@@ -4,6 +4,11 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
+/**
+ * Reads our .wav file to play a sound at the end of our code
+ * Here we use a try and catch to catch exception e
+ */
+
 public class PlaySound {
     protected void playSound() {
         File ramsay = new File("sounds/ramsaysoundwav.wav");

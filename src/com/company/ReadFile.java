@@ -4,6 +4,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * Reads our Recipe.txt file and uses user input to print out two strings, protein and carbs
+ * We also use FileNotFoundException e to make sure we get an error message if the file is not found
+ *
+ */
+
 public class ReadFile {
 
     public void readFile(String protein, String carb) {

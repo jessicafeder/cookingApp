@@ -4,6 +4,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Reads Recipe.txt
+ */
+
 public class WriteRecipe {
     public static void writeRecipe() throws IOException {
         FileWriter fw;
