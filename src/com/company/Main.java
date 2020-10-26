@@ -20,12 +20,12 @@ public class Main {
         if (inputChoice.equals("1")) {
             System.out.println("Great! Here is a list of recipes for you to choose from: \n ");
             FileToArray.fileToArray("src/Files/Recipe.txt");
-            System.out.println("\nDid you fancy any of the recipes? If yes type Y, if not write your own by typing N: ");
+            System.out.println("\nDid you fancy any of the recipes? If yes press 1, if not write your own by pressing 2: ");
             String inputChoice1 = sc.nextLine();
-            if (inputChoice1.equals("Y")) {
+            if (inputChoice1.equals("1")) {
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
                 mySound.playSound();
-            } else if (inputChoice1.equals("N")) {
+            } else if (inputChoice1.equals("2")) {
                 System.out.println("Write your recipe in the following order -> PROTEIN WITH CARB: URL ");
                 WriteRecipe.writeRecipe();
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
