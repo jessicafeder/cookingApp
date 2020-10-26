@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Reads Recipe.txt
+ * Reads Recipe.txt file and takes in user input to add text to file
  */
 
 public class WriteRecipe {
