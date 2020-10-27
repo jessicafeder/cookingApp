@@ -5,18 +5,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-/**
- * Reads our file and sorts it in alphabetical order
- * Throws an IO Exception
- *
- */
 
 public class FileToArray {
-    /**
-     *
-     * @param path
-     * @throws IOException
-     */
+/**
+ * Reads our file and sorts it in alphabetical order
+ * @param path defines the filepath you want to read from
+ * @throws IOException general if something does not work
+ */
     public static void fileToArray(String path) throws IOException {
 
         List<String> recipesList = Files.readAllLines(Paths.get(path));

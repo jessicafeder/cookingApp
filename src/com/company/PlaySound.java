@@ -7,12 +7,16 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Reads our .wav file to play a sound at the end of our code
- * Here we use a try and catch to catch exception e
- */
 
 public class PlaySound {
+/**
+ * Reads our .wav file to play a sound at the end of our code
+ * @param file defines the file, in this case the audio file
+ * @throws LineUnavailableException if a line is not available
+ * @throws IOException general if something does not work
+ * @throws UnsupportedAudioFileException if an audio file is not recognized
+ * @throws InterruptedException as we use thread.sleep to make sure it isn´t interrupted
+ */
     static void playSound(File file) throws LineUnavailableException, IOException, UnsupportedAudioFileException, InterruptedException {
 
             Clip clip = AudioSystem.getClip();

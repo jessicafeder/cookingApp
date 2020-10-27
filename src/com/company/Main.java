@@ -56,7 +56,6 @@ public class Main {
                 System.out.println("Invalid choice, please try again");
             }
         }
-
     }
 
     static void playMusic(){
