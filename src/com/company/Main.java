@@ -59,10 +59,9 @@ public class Main {
     }
 
     static void playMusic(){
-        PlaySound sound = new PlaySound();
         File ramsay = new File("sounds/ramsaysoundwav.wav");
         try{
-            sound.playSound(ramsay);
+            PlaySound.playSound(ramsay);
         } catch (LineUnavailableException | UnsupportedAudioFileException | InterruptedException | IOException e){
             e.printStackTrace();
         }

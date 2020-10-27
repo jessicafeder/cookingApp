@@ -1,11 +1,7 @@
 package com.company;
 
-import org.junit.Rule;
-import org.junit.rules.TemporaryFolder;
-
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class WriteRecipe {
 /**
