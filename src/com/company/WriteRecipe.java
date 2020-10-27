@@ -12,14 +12,9 @@ import java.util.Scanner;
  */
 
 public class WriteRecipe {
-    public static void writeRecipe() throws IOException {
-
-        FileWriter fw;
-        fw = new FileWriter("src/Files/Recipe.txt", true);
-        Scanner writeRecipe = new Scanner(System.in);
-        String input = writeRecipe.nextLine();
+    public static void writeRecipe(String filepath, String input) throws IOException {
+        FileWriter fw = new FileWriter(filepath, true);
         fw.write("\n" + input);
-        writeRecipe.close();
         fw.close();
     }
 }

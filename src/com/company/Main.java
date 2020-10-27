@@ -1,6 +1,8 @@
 package com.company;
 
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.*;
 import java.util.Scanner;
 
@@ -8,12 +10,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        PlaySound sound = new PlaySound();
         ReadFile myFile = new ReadFile();
-
         Scanner sc = new Scanner(System.in);
         System.out.println("\n\uD83C\uDF74 Hello, welcome to the Cooking App \uD83C\uDF74\n--------------------------------------");
-
         boolean loop = true;
         while (loop) {
             System.out.println("\nFor a list of recipes press 1, to choose your own ingredients press 2: ");
@@ -26,12 +25,18 @@ public class Main {
                 String inputChoice1 = sc.nextLine();
                 if (inputChoice1.equals("1")) {
                     System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
-                    sound.playSound();
+                    playMusic();
                 } else if (inputChoice1.equals("2")) {
                     System.out.println("Write your recipe in the following order -> PROTEIN WITH CARB: URL (Link from website) ");
-                    WriteRecipe.writeRecipe();
+                    String input = sc.nextLine();
+                    try{
+                        WriteRecipe.writeRecipe("src/Files/Recipe.txt", input);
+                    }catch (IOException ioException){
+                        ioException.printStackTrace();
+                    }
+                    sc.close();
                     System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
-                    sound.playSound();
+                    playMusic();
                 }
 
             } else if (inputChoice.equals("2")) {
@@ -46,11 +51,21 @@ public class Main {
 
                 myFile.readFile(protein, carb);
                 System.out.println("\nGood luck and have fun! \uD83C\uDF74\n------------------------------------");
-                sound.playSound();
+                playMusic();
             } else {
                 System.out.println("Invalid choice, please try again");
             }
         }
 
+    }
+
+    static void playMusic(){
+        PlaySound sound = new PlaySound();
+        File ramsay = new File("sounds/ramsaysoundwav.wav");
+        try{
+            sound.playSound(ramsay);
+        } catch (LineUnavailableException | UnsupportedAudioFileException | InterruptedException | IOException e){
+            e.printStackTrace();
+        }
     }
 }

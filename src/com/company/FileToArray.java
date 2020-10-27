@@ -8,10 +8,15 @@ import java.util.List;
 /**
  * Reads our file and sorts it in alphabetical order
  * Throws an IO Exception
+ *
  */
 
 public class FileToArray {
-
+    /**
+     *
+     * @param path
+     * @throws IOException
+     */
     public static void fileToArray(String path) throws IOException {
 
         List<String> recipesList = Files.readAllLines(Paths.get(path));
